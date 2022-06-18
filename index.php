@@ -1,3 +1,3 @@
 <?php
-echo "i am here";
+echo "<h1>Welcome to my server</h1>";
  ?>
