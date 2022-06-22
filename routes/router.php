@@ -1,7 +1,8 @@
 <?php
 $uri=explode("/",$_SERVER['REQUEST_URI']);
+$sri=explode("/",$_SERVER['REQUEST_URI']);
 
-switch ($uri[2]) {
+switch ($uri[1] && $sri[1]) {
   case '':
     include APP_PATH."/first_site/view/login.html";
     break;
