@@ -1,6 +1,7 @@
 <?php
 $uri=explode("/",$_SERVER['REQUEST_URI']);
 
+var_dump($uri);
 switch ($uri[1]) {
   case '':
     include APP_PATH."/view/login.html";
