@@ -1,6 +1,6 @@
 <?php
 define("DBNAME","message");
-define("DBUSER","kodageek");
+define("DBUSER","root");
 define("DBPASS","vagrant");
 
 

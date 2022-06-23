@@ -50,6 +50,7 @@ xhr.send(data);
 // };
 
   function dash(){
+    var local_session = localStorage.getItem("mtk1");
     var method= "POST";
     var url="/dash";
     var data="user="+atob(localStorage.getItem("mtk1"));
