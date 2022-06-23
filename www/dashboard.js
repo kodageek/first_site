@@ -1,8 +1,11 @@
 console.log("I am here");
 
 if(localStorage.getItem("mtk1")){
+    console.log("I have a seesion");
   var local_session = localStorage.getItem("mtk1");
 window.addEventListener("load",function(e){
+
+  console.log("wndow loaded")
 
     var method="POST";
     var url="/reload";
@@ -12,21 +15,21 @@ window.addEventListener("load",function(e){
     var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function(){
   if(xhr.readyState == 4 && xhr.status  ==200){
+    console.log(xhr.responseText)
  var res=JSON.parse(xhr.responseText);
+
+ document.getElementById("red").innerHTML= "Welcome "+atob(local_session);
   if(res.success){
-    if(res.available){
-      console.log("I love here");
-      load();
-          dash();
-   document.getElementById("red").innerHTML= "Welcome "+atob(local_session);
-   // document.getElementById("chatbox").innerHTML=dash();
-   // chatbox.scrollTop = chatbox.scrollHeight
+  console.log("I love here");
+  load();
+      dash();
+// document.getElementById("chatbox").innerHTML=dash();
+// chatbox.scrollTop = chatbox.scrollHeight
 
 //      var newscrollHeight = document.getElementById("chatbox")[0].scrollHeight - 20;
 //    if(newscrollHeight > oldscrollHeight){
 //     document.getElementById("chatbox").animate({ scrollTop: newscrollHeight }, 'normal');
 // }
-}
 }
 }
 
