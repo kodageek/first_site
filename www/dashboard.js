@@ -1,8 +1,8 @@
 console.log("I am here");
 
+if(localStorage.getItem("mtk1")){
+  var local_session = localStorage.getItem("mtk1");
 window.addEventListener("load",function(e){
-  if(localStorage.getItem("mtk1")){
-    var local_session = localStorage.getItem("mtk1");
 
     var method="POST";
     var url="/reload";
@@ -35,10 +35,10 @@ xhr.open(method,url,true);
 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xhr.send(data);
 
+});
 }else{
   window.location="login";
 }
-});
 
 // function top() {
 //     document.getElementById( 'top' ).scrollIntoView();
