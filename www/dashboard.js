@@ -1,4 +1,4 @@
-
+console.log("I am here");
 
 window.addEventListener("load",function(e){
   if(localStorage.getItem("mtk1")){
